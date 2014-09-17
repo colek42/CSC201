@@ -245,7 +245,7 @@ getMin:
 
 process:
 
-	li	$s7, 0              	#s7 = 0
+	li	$t1, 0              	#s7 = 0
 	move	$t0, $a0            	#t0 = a0
 	
 	
@@ -288,20 +288,22 @@ procloop:
 	mfhi	$a3
 	
 
-        addi $sp, $sp -4      		# push AR onto stack
-        sw   $ra, 0($sp)      		# save return address on stack
+        addi $sp, $sp -8      		# push AR onto stack
+        sw   $ra, 0($sp)
+        sw   $t1, 4($sp)      		# save return address on stack
         jal  getMaxMin          	# call function process
-        lw   $ra, 0($sp)      		# restore return address from stack
-        addi $sp, $sp 4       		# pop AR from stack
+        lw   $ra, 0($sp)
+        lw   $t1, 4($sp)      		# restore return address from stack
+        addi $sp, $sp 8       		# pop AR from stack
 
 	sub	$t0, $v0, $v1		#subtract min from max
 
-	add	$s7, $s7, 1		#iterate counter
+	add	$t1, $t1, 1		#iterate counter
 	
 	li	$t2, 6174		#t2 gets overwritten so lets reset it
 	bne	$t0, $t2, procloop	#if t0 != $t2 loop
 
-	move	$v0, $s7		#set return value		
+	move	$v0, $t1		#set return value		
 	jr	$ra			#return
 	
 								
