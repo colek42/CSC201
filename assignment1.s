@@ -1,6 +1,6 @@
 # COURSE:     CSC201
 # ASSIGNMENT: 1
-# STUDENT:      <----  Put your name here and delete rest of line.
+# STUDENT:    Kennedy, Nicholas J
 # INSTRUCTOR: Dr. V. Dwight House
 # DATE DUE:   Friday, September 19, 2014, by midnight
 # PURPOSE:    To read non-negative 4-digit integers from stdin and find how long it takes to reach 6174.
