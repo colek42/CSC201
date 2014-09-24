@@ -1,5 +1,5 @@
 # Graded activity two for CSC 201, Fall 2014
-# put your name here
+# Nicholas Kennedy
 
            .data
 prompt1:   .asciiz "Enter a number (negative to quit): "   # prompt message
