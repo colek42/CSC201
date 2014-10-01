@@ -1,6 +1,6 @@
 # Graded activity three for CSC 201, Fall 2014
 
-# Name:  You will lose five points credit if your name is not here.
+# Name:  Nicholas Kennedy
 
 # Register usage:
 #   $a0 = 10000000 (hex) - the base address of the array
